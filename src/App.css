@@ -1,12 +1,17 @@
+
 .card {
   display: flex;
-  justify-content:center;
-  align-items:flex-start;
-  height: 100vh;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  height: auto;
+
 }
 
 .card_calculation {
   padding: 0 3em;
+  width: auto;
 }
 
 .card_calculation form {
@@ -31,23 +36,26 @@
     text-align: center;
 }
 
+
 .card_calculation input {
-  background-color: rgb(255,58,74);
-  display: flex;
-  justify-content: center;
-  margin-top: 1em;
-  padding: .3em 0;
-  font-size: 1.5em;
+  background-color: rgb(255, 58, 74);
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
   text-align: center;
-  border-radius: 8px;
-  
-  
+    border-radius: 8px;
+  width: auto;
+  /* Ocupa todo el ancho en móviles */
 }
 
 .card_calculation button {
   margin: 1em 0;
-  font-size: 1em;
-  background-color: rgb(255, 16, 35);
+    font-size: 1em;
+    background-color: rgb(255, 16, 35);
+  width: 100%;
+  /* Ocupa todo el ancho en móviles */
 }
 
 .card_calculation p {
@@ -135,4 +143,35 @@ input:checked + .slider:before     {
   text-align: center;
   padding: 1em 0;
   border-radius: 8px;
+}
+
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+    align-items: flex-start;
+    height: 100vh;
+    color: white;
+  }
+
+  .card_calculation {
+    padding: 0 3em;
+    width: auto; 
+  }
+
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header img {
+    width: 15%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .header h2 {
+    font-size: 2em;
+    margin-right: 2em;
+  }
 }
